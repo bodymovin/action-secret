@@ -10,10 +10,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
+        env:
+          SECRET_TEST: ${{ secrets.TEST_SECRET }}
+          FIRST_NAME: HH
+          LAST_NAME: TT
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'TEST the Octocat'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
