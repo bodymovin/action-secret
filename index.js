@@ -11,7 +11,7 @@ try {
   console.log(process.env.SECRET_TEST);
   console.log(printSecret);
   console.log('length', length);
-  console.log('charAt', );
+  console.log('charAt', charAt);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
   // Get the JSON webhook payload for the event that triggered the workflow
