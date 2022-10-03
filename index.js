@@ -2,6 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 try {
+  console.log(`PASO 1`);
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello 2 ${nameToGreet}!`);
@@ -19,4 +20,5 @@ try {
   console.log(`The event payload: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
+  console.log('FAILEDD');
 }
